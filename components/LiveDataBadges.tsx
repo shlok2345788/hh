@@ -46,7 +46,7 @@ export function LiveDataBadges({ sources, isLive }: LiveDataBadgesProps) {
           <span className="text-xs font-mono text-blue-700 dark:text-blue-300">
             {source.name}
           </span>
-          <span className="text-xs text-gray-600 dark:text-gray-400">
+          <span className="text-xs text-gray-600 dark:text-gray-400" suppressHydrationWarning>
             {formatTimestamp(source.timestamp)}
           </span>
           {source.confidence && (
@@ -77,7 +77,7 @@ export function CompetitorLiveBadge({
       {isLive && (
         <span className="inline-block w-1.5 h-1.5 bg-orange-500 rounded-full animate-pulse"></span>
       )}
-      <span className={isLive ? "text-orange-600 dark:text-orange-400" : "text-gray-600"}>
+      <span className={isLive ? "text-orange-600 dark:text-orange-400" : "text-gray-600"} suppressHydrationWarning>
         {formatTimestamp(auditedDate)}
       </span>
     </div>

@@ -37,7 +37,7 @@ export function Footer() {
             <Link href="#" className="text-sm text-muted-foreground transition-colors hover:text-primary">Terms of Service</Link>
           </div>
         </div>
-        <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground">
+        <div className="mt-12 border-t border-border pt-8 text-center text-sm text-muted-foreground" suppressHydrationWarning>
           © {new Date().getFullYear()} SiteBlitz by Shreyas. All rights reserved.
         </div>
       </div>

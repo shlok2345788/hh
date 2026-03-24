@@ -99,7 +99,7 @@ export default function AuditPage() {
           <span className="font-mono text-xs font-semibold uppercase tracking-wider text-success">
             System Online
           </span>
-          <span className="ml-auto font-mono text-xs text-muted-foreground">{nowText}</span>
+          <span className="ml-auto font-mono text-xs text-muted-foreground" suppressHydrationWarning>{nowText}</span>
         </div>
       </div>
 
