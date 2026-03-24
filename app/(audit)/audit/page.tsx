@@ -371,7 +371,7 @@ export default function AuditPage() {
                         <dt className="text-zinc-400 text-xs mt-1">Est. Monthly Traffic</dt>
                       </div>
                     )}
-                    {report.roi.conversionRate != null && (
+                    {report.roi.conversionRate != null && Number.isFinite(report.roi.conversionRate) && (
                       <div>
                         <dd className="text-2xl font-bold text-violet-400">{report.roi.conversionRate.toFixed(2)}%</dd>
                         <dt className="text-zinc-400 text-xs mt-1">Conversion Rate</dt>

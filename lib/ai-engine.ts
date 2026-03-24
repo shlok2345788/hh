@@ -60,8 +60,9 @@ Return ONLY valid JSON with this exact structure:
   "priority_actions": [{"issue":"","impact":"High|Medium|Low","fix":""}]
 }`;
 
+  const timeoutMs = parseInt(process.env.OLLAMA_TIMEOUT_MS ?? "120000", 10);
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 120_000);
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
   let response: Response;
   try {

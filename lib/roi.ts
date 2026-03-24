@@ -40,7 +40,7 @@ export function computeROI(
     };
   }
 
-  const avgOrderValue = 75; // conservative default in USD
+  const avgOrderValue = parseInt(process.env.AVG_ORDER_VALUE_USD ?? "75", 10);
   const revenueImpact = Math.round(
     estimatedMonthlyTraffic * baseConversionRate * avgOrderValue
   );
